@@ -9,6 +9,12 @@ pygame.mixer.init()
 
 print("Mixer init...")
 
+green = LED(17)
+
+green.on()
+sleep(10)
+green.off()
+
 curr_index = 0
 
 wav_files = []
@@ -34,6 +40,10 @@ print("Switch initiated")
 
 				
 def handle_button():
+
+        green.on()
+        sleep(1)
+        green.off()
 
 	global curr_index
 	
