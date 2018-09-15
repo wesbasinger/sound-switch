@@ -31,7 +31,9 @@ for item in os.listdir(USB_DRIVE):
 
 	ext = item[-4:]
 
-	if ext == ".wav":
+        first_two_char = item[:2]
+
+	if ext == ".wav" and first_two_char != "._":
 
 		wav_files.append(USB_DRIVE + item)
 
