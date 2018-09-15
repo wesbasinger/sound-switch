@@ -5,22 +5,27 @@ from signal import pause
 from time import sleep
 import pygame
 
-pygame.mixer.init()
-
-print("Mixer init...")
 
 green = LED(17)
 
-green.on()
-sleep(10)
-green.off()
+for i in range(3):
 
+    for i in range(10):
+
+        green.on()
+        sleep(1)
+        green.off()
+        sleep(1)
+
+pygame.mixer.init()
+
+print("Mixer init...")
 curr_index = 0
 
 wav_files = []
 
 # ASSUMING YOU HAVE A DRIVE MOUNTED AT THE FOLLOWING LOCATION
-USB_DRIVE = '/media/usb/'
+USB_DRIVE = '/media/pi/U/'
 
 for item in os.listdir(USB_DRIVE):
 
@@ -37,6 +42,7 @@ for _file in wav_files:
 button = Button(2)
 
 print("Switch initiated")
+
 
 				
 def handle_button():
