@@ -13,15 +13,16 @@ curr_index = 0
 
 wav_files = []
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
+# ASSUMING YOU HAVE A DRIVE MOUNTED AT THE FOLLOWING LOCATION
+USB_DRIVE = '/media/usb/'
 
-for item in os.listdir(dir_path):
+for item in os.listdir(USB_DRIVE):
 
 	ext = item[-4:]
 
 	if ext == ".wav":
 
-		wav_files.append(item)
+		wav_files.append(USB_DRIVE + item)
 
 for _file in wav_files:
 
