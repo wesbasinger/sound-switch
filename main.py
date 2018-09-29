@@ -8,7 +8,7 @@ import pygame
 
 green = LED(17)
 
-for i in range(3):
+for i in range(2):
 
     for i in range(10):
 
@@ -50,7 +50,7 @@ print("Switch initiated")
 def handle_button():
 
         green.on()
-        sleep(1)
+        sleep(2)
         green.off()
 
 	global curr_index
